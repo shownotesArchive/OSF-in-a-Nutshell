@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="creator" content="Marked.app"/>
+</head>
+<body>
+<h1 id="osfinanutshell">OSF in a Nutshell</h1>
+
+<h2 id="english">english</h2>
+
+<h3 id="explanation">Explanation</h3>
+
+<p>The Open Show Notes format, or short OSF is a format which simplifies the creation of show notes for podcasts. </p>
+
+<h3 id="worddefinition">Word definition</h3>
+
+<p>The following statement uses the key words defined according to RFC 2119.</p>
+
+<h3 id="basics">Basics</h3>
+
+<p>Important basics of the Open Show Notes format (OSF) are:</p>
+
+<ul>
+<li>each line is its own separate item (related information <strong>shall not</strong> be separated by <code>\n</code>)</li>
+<li>blank lines are ignored</li>
+<li>each item <strong>may</strong> contain a time specification</li>
+<li>Times are to specify as UNIX timestamps or in <code>HH:MM:SS</code> format (if the Showpad is used to write show notes, these times can be made by <code>###</code> followed by a whitespace)</li>
+<li>each item <strong>must</strong> contain a text, it can contain most of UTF&#8211;8 characters, but to avoid problems, it would make sense to limit themselves to ISO&#8211;8859&#8211;15</li>
+<li>each item <strong>may</strong> contain a URL, this URL has to beginn with <code>&lt;</code> and end with <code>&gt;</code></li>
+<li>each item can contain multiple tags, they have to start with <code>#</code></li>
+<li>There are also tags with predefined properties:
+
+<ul>
+<li><code>#chapter</code> identifies an item as the beginning of a new chapter</li>
+<li><code>#topic</code> identifies an item as an important part of the show notes</li>
+<li><code>#video</code>, <code>#audio</code> and <code>#image</code> and can be used to refer to media files</li>
+<li><code>#shopping</code> links can be marked for online shops</li>
+<li>Links with further and descriptive content, which was not directly discussed in the podcast can be marked with <code>#glossary</code></li>
+<li>Links that have been directly mentioned in the podcast, have to be marked with <code>#link</code></li>
+<li>in addition to any item that contains a link, the top and second level domain are attached as a tag</li>
+<li>more tags can also be used, but have no immediate impact on the result</li>
+</ul></li>
+</ul>
+
+<h3 id="tools">Tools</h3>
+
+<ul>
+<li><a href="https://github.com/shownotes/show-pad">ShowPad</a> is an extension to <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> with user management, time management, a nice interface, and import and export functions</li>
+<li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> is a reference implementation of the OSF parser in JavaScript</li>
+<li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> is the first implementation of the OSF standards (written in PHP). A freely usable installation of this tool is available at <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a></li>
+<li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">auf wordpress.org</a>) is a WordPress Plugin (also available as <a href="https://github.com/podlove/podlove-publisher/tree/module-shownotes">PPP Module</a>), which allows the conversion of OSF to HTML directly in the blog</li>
+<li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> extends EPL installations by an automated date / time input</li>
+<li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> are bookmarklets which were used by the <a href="http://shownot.es">Shownot.es Team</a> before moving to <a href="https://github.com/ether/etherpad-lite">Etherpad Lite</a></li>
+</ul>
+
+<h2 id="deutsch">deutsch</h2>
+
+<h3 id="erklrung">Erklärung</h3>
+
+<p>Das Open Shownotes Format, oder auch kurz OSF ist ein Format welches die Erstellung von Shownotes für Podcasts erleichtert. </p>
+
+<h3 id="wortdefinition">Wortdefinition</h3>
+
+<p>Die folgende Erklärung nutzt die <a href="http://tools.ietf.org/html/rfc2119">Key words Definition laut RFC 2119</a> wobei in der deutschen Übersetzung <code>MUST</code>/<code>SHALL</code> mit <code>MUSS</code>, <code>REQUIRED</code> mit <code>BENÖTIGT</code>, <code>MUST NOT</code>/<code>SHALL NOT</code> mit <code>DARF NICHT</code>, <code>SHOULD</code> mit <code>SOLLTE</code>/<code>KANN</code>, <code>SHOULD NOT</code> mit <code>SOLLTE NICHT</code> und <code>MAY</code> mit <code>KANN</code> übersetzt wurde.</p>
+
+<h3 id="grundlagen">Grundlagen</h3>
+
+<p>Wichtige Grundlagen des Open Shownotes Format (OSF) sind:</p>
+
+<ul>
+<li>jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch <code>\n</code> trennen</li>
+<li>leere Zeilen werden ignoriert</li>
+<li>jedes Item <strong>kann</strong> eine Zeitangabe enthalten</li>
+<li>Zeitangaben sind als UNIX-Timestamps oder im <code>HH:MM:SS</code> Format anzugeben (wenn das ShowPad zum Shownotes schreiben verwendet wird, können diese Zeitangaben per <code>###</code> und einem darauf folgendem Leerzeichen automatisch eingefügt werden)</li>
+<li>jedes Item <strong>muss</strong> einen Text enthalten, dieser kann die meisten UTF&#8211;8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO&#8211;8859&#8211;15 zu beschränken</li>
+<li>jedes Item <strong>kann</strong> <strong>eine</strong> URL enthalten, diese ist mit <code>&lt;</code> am Anfang und <code>&gt;</code> am Ende zu kennzeichnen</li>
+<li>jedes Item <strong>kann</strong> <strong>mehrere</strong> Tags enthalten, diese sind mit <code>#</code> zu beginnen</li>
+<li>ausserdem gibt es Tags mit vordefinierten Eigenschaften:
+
+<ul>
+<li><code>#chapter</code> kennzeichnet ein Item als Beginn eines neuen Kapitels</li>
+<li><code>#topic</code> kennzeichnet ein Item als wichtigen Bestandteil der Shownotes</li>
+<li><code>#video</code>, <code>#audio</code> und <code>#image</code> können verwendet werden, um Mediendateien zu referenzieren</li>
+<li>mit <code>#shopping</code> können Links zur Onlineshops gekennzeichnet werden</li>
+<li>Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit <code>#glossary</code> gekennzeichnet werden</li>
+<li>Links die direkt im Podcast erwähnt worden sind, sind mit <code>#link</code> zu kennzeichnen</li>
+<li>zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt</li>
+<li>weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis</li>
+</ul></li>
+</ul>
+
+<h3 id="tools">Tools</h3>
+
+<ul>
+<li><a href="https://github.com/shownotes/show-pad">ShowPad</a> ist eine Erweiterung von <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> um Usermanagement, Zeitmanagement, ein schönes Interface sowie Im- und Export Funktionen</li>
+<li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> ist eine Referenzimplementierung des OSF Parsers in JavaScript</li>
+<li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> ist die erste Implementierung des OSF Standards (geschrieben in PHP). Eine frei verwendbare Installation dieses Tools ist auf <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a> zu finden</li>
+<li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">auf wordpress.org</a>) ist ein WordPress Plugin (auch als <a href="https://github.com/podlove/podlove-publisher/tree/module-shownotes">PPP Modul erhältlich</a>), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht</li>
+<li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe</li>
+<li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> sind Bookmarklets die das <a href="http://shownot.es">Shownot.es Team</a> vor dem Umstieg auf <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> verwendete</li>
+</ul>
+</body>
+</html>
