@@ -1,6 +1,6 @@
 #OSF in a Nutshell
 
-##english
+##English
 
 ###Explanation
 
@@ -40,7 +40,7 @@ Important basics of the Open Show Notes format (OSF) are:
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) extends EPL installations by an automated date / time input
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) are bookmarklets which were used by the [Shownot.es Team](http://shownot.es) before moving to [Etherpad Lite](https://github.com/ether/etherpad-lite)
 
-##deutsch
+##Deutsch
 
 ###Erklärung
 
