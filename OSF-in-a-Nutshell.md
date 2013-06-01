@@ -17,14 +17,17 @@ Important basics of the Open Show Notes format (OSF) are:
 * each line is its own separate item (related information **shall not** be separated by ```\n```)
 * blank lines are ignored
 * each item **may** contain a time specification
-* Times are to specify as UNIX timestamps or in ```HH:MM:SS``` format (if the Showpad is used to write show notes, these times can be made by ```###``` followed by a whitespace)
+* Times are to specify as UNIX timestamps or in ```HH:MM:SS``` format (if the [Showpad](http://pad.shownot.es/) is used to write show notes, these times can be made by ```###``` followed by a whitespace)
+* after the time (or at the beginning of the line if no time is specified), a level of hierarchy can be set with ```-```. The more ```-``` the deeper the item is nested.
 * each item **must** contain a text, it can contain most of UTF-8 characters, but to avoid problems, it would make sense to limit themselves to ISO-8859-15
 * each item **may** contain **one** URL, this URL has to beginn with ```<``` and end with ```>```
 * each item **may** contain **multiple** tags, they have to start with ```#```
 * There are also tags with predefined properties:
-	* ```#chapter``` identifies an item as the beginning of a new chapter
-	* ```#topic``` identifies an item as an important part of the show notes
-	* ```#video```, ```#audio``` and ```#image``` and can be used to refer to media files
+	* ```#chapter``` (```#c```) identifies an item as the beginning of a new chapter
+	* ```#section``` (```#s```) splits chapters
+	* ```#topic``` (```#t```) identifies an item as an important part of the show notes
+	* ```#video``` (```#v```), ```#audio``` (```#a```) and ```#image``` (```#i```) and can be used to refer to media files
+	* ```#quote``` (```#q```) marks quotes, it should also be given the name of the person who said it
 	* ```#shopping``` links can be marked for online shops
 	* Links with further and descriptive content, which was not directly discussed in the podcast can be marked with ```#glossary```
 	* Links that have been directly mentioned in the podcast, have to be marked with ```#link```
@@ -57,14 +60,17 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch ```\n``` trennen
 * leere Zeilen werden ignoriert
 * jedes Item **kann** eine Zeitangabe enthalten
-* Zeitangaben sind als UNIX-Timestamps oder im ```HH:MM:SS``` Format anzugeben (wenn das ShowPad zum Shownotes schreiben verwendet wird, können diese Zeitangaben per ```###``` und einem darauf folgendem Leerzeichen automatisch eingefügt werden)
+* Zeitangaben sind als UNIX-Timestamps oder im Format ```HH:MM:SS``` anzugeben (wenn das [ShowPad](http://pad.shownot.es/) zum Shownotes schreiben verwendet wird, können diese Zeitangaben per ```###``` und einem darauf folgendem Leerzeichen automatisch eingefügt werden)
+* nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe über die Hierarchieebene mittels ```-``` gemacht werden. Je mehr ```-``` desto tiefer verschachtelt ist das Item.
 * jedes Item **muss** einen Text enthalten, dieser kann die meisten UTF-8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO-8859-15 zu beschränken
 * jedes Item **kann** **eine** URL enthalten, diese ist mit ```<``` am Anfang und ```>``` am Ende zu kennzeichnen
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
 * ausserdem gibt es Tags mit vordefinierten Eigenschaften:
-	* ```#chapter``` kennzeichnet ein Item als Beginn eines neuen Kapitels
-	* ```#topic``` kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
-	* ```#video```, ```#audio``` und ```#image``` können verwendet werden, um Mediendateien zu referenzieren
+	* ```#chapter``` (```#c```) kennzeichnet ein Item als Beginn eines neuen Kapitels
+	* ```#section``` (```#s```) trennt Kapitel in einzelne Sektionen
+	* ```#topic``` (```#t```) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
+	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
+	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
 	* Links die direkt im Podcast erwähnt worden sind, sind mit ```#link``` zu kennzeichnen

@@ -43,9 +43,14 @@
 \b0  contain a time specification\
 {\listtext	\'95	}Times are to specify as UNIX timestamps or in 
 \f1 HH:MM:SS
-\f0  format (if the Showpad is used to write show notes, these times can be made by 
+\f0  format (if the {\field{\*\fldinst{HYPERLINK "http://pad.shownot.es/"}}{\fldrslt \cf2 \ul \ulc2 Showpad}} is used to write show notes, these times can be made by 
 \f1 ###
 \f0  followed by a whitespace)\
+{\listtext	\'95	}after the time (or at the beginning of the line if no time is specified), a level of hierarchy can be set with 
+\f1 -
+\f0 . The more 
+\f1 -
+\f0  the deeper the item is nested.\
 {\listtext	\'95	}each item 
 \b must
 \b0  contain a text, it can contain most of UTF\'968 characters, but to avoid problems, it would make sense to limit themselves to ISO\'968859\'9615\
@@ -69,17 +74,37 @@
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440
 \ls1\ilvl1
 \f1 \cf0 {\listtext	\uc0\u9702 	}#chapter
-\f0  identifies an item as the beginning of a new chapter\
+\f0  (
+\f1 #c
+\f0 ) identifies an item as the beginning of a new chapter\
+\ls1\ilvl1
+\f1 {\listtext	\uc0\u9702 	}#section
+\f0  (
+\f1 #s
+\f0 ) splits chapters\
 \ls1\ilvl1
 \f1 {\listtext	\uc0\u9702 	}#topic
-\f0  identifies an item as an important part of the show notes\
+\f0  (
+\f1 #t
+\f0 ) identifies an item as an important part of the show notes\
 \ls1\ilvl1
 \f1 {\listtext	\uc0\u9702 	}#video
-\f0 , 
+\f0  (
+\f1 #v
+\f0 ), 
 \f1 #audio
-\f0  and 
+\f0  (
+\f1 #a
+\f0 ) and 
 \f1 #image
-\f0  and can be used to refer to media files\
+\f0  (
+\f1 #i
+\f0 ) and can be used to refer to media files\
+\ls1\ilvl1
+\f1 {\listtext	\uc0\u9702 	}#quote
+\f0  (
+\f1 #q
+\f0 ) marks quotes, it should also be given the name of the person who said it\
 \ls1\ilvl1
 \f1 {\listtext	\uc0\u9702 	}#shopping
 \f0  links can be marked for online shops\
@@ -161,11 +186,16 @@
 {\listtext	\'95	}jedes Item 
 \b kann
 \b0  eine Zeitangabe enthalten\
-{\listtext	\'95	}Zeitangaben sind als UNIX-Timestamps oder im 
+{\listtext	\'95	}Zeitangaben sind als UNIX-Timestamps oder im Format 
 \f1 HH:MM:SS
-\f0  Format anzugeben (wenn das ShowPad zum Shownotes schreiben verwendet wird, k\'f6nnen diese Zeitangaben per 
+\f0  anzugeben (wenn das {\field{\*\fldinst{HYPERLINK "http://pad.shownot.es/"}}{\fldrslt \cf2 \ul \ulc2 ShowPad}} zum Shownotes schreiben verwendet wird, k\'f6nnen diese Zeitangaben per 
 \f1 ###
 \f0  und einem darauf folgendem Leerzeichen automatisch eingef\'fcgt werden)\
+{\listtext	\'95	}nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe \'fcber die Hierarchieebene mittels 
+\f1 -
+\f0  gemacht werden. Je mehr 
+\f1 -
+\f0  desto tiefer verschachtelt ist das Item.\
 {\listtext	\'95	}jedes Item 
 \b muss
 \b0  einen Text enthalten, dieser kann die meisten UTF\'968 Zeichen enthalten, um Probleme zu vermeiden w\'e4re es aber Sinnvoll, sich auf ISO\'968859\'9615 zu beschr\'e4nken\
@@ -189,17 +219,37 @@
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440
 \ls3\ilvl1
 \f1 \cf0 {\listtext	\uc0\u9702 	}#chapter
-\f0  kennzeichnet ein Item als Beginn eines neuen Kapitels\
+\f0  (
+\f1 #c
+\f0 ) kennzeichnet ein Item als Beginn eines neuen Kapitels\
+\ls3\ilvl1
+\f1 {\listtext	\uc0\u9702 	}#section
+\f0  (
+\f1 #s
+\f0 ) trennt Kapitel in einzelne Sektionen\
 \ls3\ilvl1
 \f1 {\listtext	\uc0\u9702 	}#topic
-\f0  kennzeichnet ein Item als wichtigen Bestandteil der Shownotes\
+\f0  (
+\f1 #t
+\f0 ) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes\
 \ls3\ilvl1
 \f1 {\listtext	\uc0\u9702 	}#video
-\f0 , 
+\f0  (
+\f1 #v
+\f0 ), 
 \f1 #audio
-\f0  und 
+\f0  (
+\f1 #a
+\f0 ) und 
 \f1 #image
-\f0  k\'f6nnen verwendet werden, um Mediendateien zu referenzieren\
+\f0  (
+\f1 #i
+\f0 ) k\'f6nnen verwendet werden, um Mediendateien zu referenzieren\
+\ls3\ilvl1
+\f1 {\listtext	\uc0\u9702 	}#quote
+\f0  (
+\f1 #q
+\f0 ) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden\
 {\listtext	\uc0\u9702 	}mit 
 \f1 #shopping
 \f0  k\'f6nnen Links zur Onlineshops gekennzeichnet werden\
