@@ -57,7 +57,7 @@ Die folgende Erklärung muss wie in [RFC 2119](http://tools.ietf.org/html/rfc211
 
 Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 
-* jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch ```\n``` trennen
+* jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch ```\n``` trennen)
 * leere Zeilen werden ignoriert
 * jedes Item **kann** eine Zeitangabe enthalten
 * Zeitangaben sind als UNIX-Timestamps oder im Format ```HH:MM:SS``` anzugeben (wenn das [ShowPad](http://pad.shownot.es/) zum Shownotes schreiben verwendet wird, können diese Zeitangaben per ```###``` und einem darauf folgendem Leerzeichen automatisch eingefügt werden)
