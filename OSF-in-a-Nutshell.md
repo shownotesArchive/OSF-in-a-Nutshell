@@ -29,6 +29,7 @@ Important basics of the Open Show Notes format (OSF) are:
 	* ```#video``` (```#v```), ```#audio``` (```#a```) and ```#image``` (```#i```) and can be used to refer to media files
 	* ```#quote``` (```#q```) marks quotes, it should also be given the name of the person who said it
 	* ```#shopping``` links can be marked for online shops
+	* ```#prediction``` is used to highlight predictions that need to be checked later
 	* Links with further and descriptive content, which was not directly discussed in the podcast can be marked with ```#glossary```
 	* Links that have been directly mentioned in the podcast, have to be marked with ```#link```
 	* in addition to any item that contains a link, the top and second level domain are attached as a tag
@@ -61,7 +62,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * leere Zeilen werden ignoriert
 * jedes Item **kann** eine Zeitangabe enthalten
 * Zeitangaben sind als UNIX-Timestamps oder im Format ```HH:MM:SS``` anzugeben (wenn das [ShowPad](http://pad.shownot.es/) zum Shownotes schreiben verwendet wird, können diese Zeitangaben per ```###``` und einem darauf folgendem Leerzeichen automatisch eingefügt werden)
-* nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe über die Hierarchieebene mittels ```-``` gemacht werden. Je mehr ```-``` desto tiefer verschachtelt ist das Item.
+* nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe über die Hierarchieebene mittels ```-``` gemacht werden. Je mehr ```-```, desto tiefer verschachtelt ist das Item.
 * jedes Item **muss** einen Text enthalten, dieser kann die meisten UTF-8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO-8859-15 zu beschränken
 * jedes Item **kann** **eine** URL enthalten, diese ist mit ```<``` am Anfang und ```>``` am Ende zu kennzeichnen
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
@@ -72,6 +73,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
 	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
+	* ```#prediction``` wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
 	* Links die direkt im Podcast erwähnt worden sind, sind mit ```#link``` zu kennzeichnen
 	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt
