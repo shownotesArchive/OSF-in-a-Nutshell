@@ -47,6 +47,8 @@ Important basics of the Open Show Notes format (OSF) are:
 * [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([at wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) is a WordPress Plugin (also available as [PPP Module](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), which allows the conversion of OSF to HTML directly in the blog
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) extends EPL installations by an automated date / time input
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) are bookmarklets which were used by the [Shownot.es Team](http://shownot.es) before moving to [Etherpad Lite](https://github.com/ether/etherpad-lite)
+* [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) can parse Timedefinitions in Show notes
+* [XMPP Notification Service](https://github.com/Drake81/shownotes-message-service)
 
 ##Deutsch
 
@@ -95,3 +97,6 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([auf wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) ist ein WordPress Plugin (auch als [PPP Modul erhältlich](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) sind Bookmarklets die das [Shownot.es Team](http://shownot.es) vor dem Umstieg auf [Etherpad lite](https://github.com/ether/etherpad-lite) verwendete
+* [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) wandelt Zeitangaben in den Shownotes in weiterverarbeitbare Zahlen um
+* [XMPP Notification Service](https://github.com/Drake81/shownotes-message-service)
+
