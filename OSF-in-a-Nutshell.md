@@ -31,6 +31,7 @@ Important basics of the Open Show Notes format (OSF) are:
 	* ```#topic``` (```#t```) identifies an item as an important part of the show notes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) and ```#image``` (```#i```) and can be used to refer to media files
 	* ```#quote``` (```#q```) marks quotes, it should also be given the name of the person who said it
+		* All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (PIS)
 	* ```#shopping``` links can be marked for online shops
 	* ```#prediction``` is used to highlight predictions that need to be checked later
 	* Links with further and descriptive content, which was not directly discussed in the podcast can be marked with ```#glossary```
@@ -78,6 +79,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 	* ```#topic``` (```#t```) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
 	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
+		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (PIS)
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
 	* ```#prediction``` wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
