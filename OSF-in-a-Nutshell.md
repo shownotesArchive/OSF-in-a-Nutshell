@@ -22,7 +22,8 @@ Important basics of the Open Show Notes format (OSF) are:
 * don't use to much hierarchies
 * each item **must** contain a text, it can contain most of UTF-8 characters, but to avoid problems, it would make sense to limit themselves to ISO-8859-15
 * Items **should** begin with a capital letter, unless it is a subitems or a half-sentences
-* Punctuation at the end of items **should** be avoided
+* Punctuation marks at the end of items **should** be avoided
+* Don't write language specific quotation marks, use ```"```, they will be converted automatically by the parser
 * each item **may** contain **one** URL, this URL has to beginn with ```<``` and end with ```>```
 * each item **may** contain **multiple** tags, they have to start with ```#```
 * There are also tags with predefined properties:
@@ -31,6 +32,7 @@ Important basics of the Open Show Notes format (OSF) are:
 	* ```#topic``` (```#t```) identifies an item as an important part of the show notes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) and ```#image``` (```#i```) and can be used to refer to media files
 	* ```#quote``` (```#q```) marks quotes, it should also be given the name of the person who said it
+		* All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (PIS)
 	* ```#shopping``` links can be marked for online shops
 	* ```#prediction``` is used to highlight predictions that need to be checked later
 	* Links with further and descriptive content, which was not directly discussed in the podcast can be marked with ```#glossary```
@@ -46,6 +48,8 @@ Important basics of the Open Show Notes format (OSF) are:
 * [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([at wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) is a WordPress Plugin (also available as [PPP Module](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), which allows the conversion of OSF to HTML directly in the blog
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) extends EPL installations by an automated date / time input
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) are bookmarklets which were used by the [Shownot.es Team](http://shownot.es) before moving to [Etherpad Lite](https://github.com/ether/etherpad-lite)
+* [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) can parse Timedefinitions in Show notes
+* [XMPP Notification Service](https://github.com/Drake81/shownotes-message-service)
 
 ##Deutsch
 
@@ -70,6 +74,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * jedes Item **muss** einen Text enthalten, dieser kann die meisten UTF-8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO-8859-15 zu beschränken
 * Items **sollten** mit Großbuchstaben beginnen, es sei den es handelt sich um Subitems oder Halbsätze
 * Satzzeichen am Ende von Items **sollten** vermieden werden
+* Es sollten keine Sprachspezifischen Anführungszeichen, sondern nur ```"``` verwendet werden
 * jedes Item **kann** **eine** URL enthalten, diese ist mit ```<``` am Anfang und ```>``` am Ende zu kennzeichnen
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
 * ausserdem gibt es Tags mit vordefinierten Eigenschaften:
@@ -78,6 +83,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 	* ```#topic``` (```#t```) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
 	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
+		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (PIS)
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
 	* ```#prediction``` wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
@@ -93,3 +99,6 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([auf wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) ist ein WordPress Plugin (auch als [PPP Modul erhältlich](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) sind Bookmarklets die das [Shownot.es Team](http://shownot.es) vor dem Umstieg auf [Etherpad lite](https://github.com/ether/etherpad-lite) verwendete
+* [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) wandelt Zeitangaben in den Shownotes in weiterverarbeitbare Zahlen um
+* [XMPP Notification Service](https://github.com/Drake81/shownotes-message-service)
+
