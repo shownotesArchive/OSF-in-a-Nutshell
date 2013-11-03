@@ -22,7 +22,8 @@ Important basics of the Open Show Notes format (OSF) are:
 * don't use to much hierarchies
 * each item **must** contain a text, it can contain most of UTF-8 characters, but to avoid problems, it would make sense to limit themselves to ISO-8859-15
 * Items **should** begin with a capital letter, unless it is a subitems or a half-sentences
-* Punctuation at the end of items **should** be avoided
+* Punctuation marks at the end of items **should** be avoided
+* Don't write language specific quotation marks, use ```"```, they will be converted automatically by the parser
 * each item **may** contain **one** URL, this URL has to beginn with ```<``` and end with ```>```
 * each item **may** contain **multiple** tags, they have to start with ```#```
 * There are also tags with predefined properties:
@@ -73,6 +74,7 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * jedes Item **muss** einen Text enthalten, dieser kann die meisten UTF-8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO-8859-15 zu beschränken
 * Items **sollten** mit Großbuchstaben beginnen, es sei den es handelt sich um Subitems oder Halbsätze
 * Satzzeichen am Ende von Items **sollten** vermieden werden
+* Es sollten keine Sprachspezifischen Anführungszeichen, sondern nur ```"``` verwendet werden
 * jedes Item **kann** **eine** URL enthalten, diese ist mit ```<``` am Anfang und ```>``` am Ende zu kennzeichnen
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
 * ausserdem gibt es Tags mit vordefinierten Eigenschaften:
