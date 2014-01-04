@@ -28,17 +28,17 @@ Important basics of the Open Show Notes format (OSF) are:
 * each item **may** contain **multiple** tags, they have to start with ```#```
 * There are also tags with predefined properties:
 	* ```#chapter``` (```#c```) identifies an item as the beginning of a new chapter
-	* ```#section``` (```#s```) splits chapters
 	* ```#topic``` (```#t```) identifies an item as an important part of the show notes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) and ```#image``` (```#i```) and can be used to refer to media files
 	* ```#quote``` (```#q```) marks quotes, it should also be given the name of the person who said it
-		* All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (PIS)
+		* All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (FAMOUS)
 	* ```#shopping``` links can be marked for online shops
 	* ```#prediction``` is used to highlight predictions that need to be checked later
 	* Links with further and descriptive content, which was not directly discussed in the podcast can be marked with ```#glossary```
 	* Links that have been directly mentioned in the podcast, have to be marked with ```#link```
-	* in addition to any item that contains a link, the top and second level domain are attached as a tag
-	* more tags can also be used, but have no immediate impact on the result
+	* unfinished items should be marked with ```#revision```(```#r```), so they wan't appear in the parsed output
+	* in addition to any item that contains a link, the top and second level domain are attached as a tag (e.g.: ```#googlecom```)
+	* more tags can also be used, but have no immediate impact on the result (for some tags exists icons: [BitmapWebIcons](http://simonwaldherr.github.io/BitmapWebIcons/))
 
 ##Tools
 

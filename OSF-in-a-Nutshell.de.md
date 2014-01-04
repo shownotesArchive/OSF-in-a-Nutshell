@@ -28,17 +28,17 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
 * ausserdem gibt es Tags mit vordefinierten Eigenschaften:
 	* ```#chapter``` (```#c```) kennzeichnet ein Item als Beginn eines neuen Kapitels
-	* ```#section``` (```#s```) trennt Kapitel in einzelne Sektionen
 	* ```#topic``` (```#t```) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
 	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
-		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (PIS)
+		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (FAMOUS)
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
 	* ```#prediction``` wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
 	* Links die direkt im Podcast erwähnt worden sind, sind mit ```#link``` zu kennzeichnen
-	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt
-	* weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis
+	* unfertige Zeilen sollten mit ```#revision```(```#r```) gekennzeichnet werden, diese werden nicht exportiert
+	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt (z.B.: ```#googlede```)
+	* weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis (für einige Tags gibt es kleine Bildchen: [BitmapWebIcons](http://simonwaldherr.github.io/BitmapWebIcons/))
 
 ##Tools
 
