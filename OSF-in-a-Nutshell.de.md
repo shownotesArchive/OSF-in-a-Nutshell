@@ -28,24 +28,25 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 * jedes Item **kann** **mehrere** Tags enthalten, diese sind mit ```#``` zu beginnen
 * ausserdem gibt es Tags mit vordefinierten Eigenschaften:
 	* ```#chapter``` (```#c```) kennzeichnet ein Item als Beginn eines neuen Kapitels
-	* ```#section``` (```#s```) trennt Kapitel in einzelne Sektionen
 	* ```#topic``` (```#t```) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes
 	* ```#video``` (```#v```), ```#audio``` (```#a```) und ```#image``` (```#i```) können verwendet werden, um Mediendateien zu referenzieren
 	* ```#quote``` (```#q```) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
-		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (PIS)
+		* Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (FAMOUS)
 	* mit ```#shopping``` können Links zur Onlineshops gekennzeichnet werden
 	* ```#prediction``` wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen
 	* Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit ```#glossary``` gekennzeichnet werden
 	* Links die direkt im Podcast erwähnt worden sind, sind mit ```#link``` zu kennzeichnen
-	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt
-	* weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis
+	* unfertige Zeilen sollten mit ```#revision```(```#r```) gekennzeichnet werden, diese werden nicht exportiert
+	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt (z.B.: ```#googlede```)
+	* weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis (für einige Tags gibt es kleine Bildchen: [BitmapWebIcons](http://simonwaldherr.github.io/BitmapWebIcons/))
 
 ##Tools
 
 * [ShowPad](https://github.com/shownotes/show-pad) ist eine Erweiterung von [Etherpad lite](https://github.com/ether/etherpad-lite) um Usermanagement, Zeitmanagement, ein schönes Interface sowie Im- und Export Funktionen
 * [tinyOSF.js](https://github.com/shownotes/tinyOSF.js) ist eine Referenzimplementierung des OSF Parsers in JavaScript
 * [OpenShownotesFormat](https://github.com/shownotes/OpenShownotesFormat) ist die erste Implementierung des OSF Standards (geschrieben in PHP). Eine frei verwendbare Installation dieses Tools ist auf [tools.shownot.es/parsersuite](http://tools.shownot.es/parsersuite/?configfile=shownotes) zu finden
-* [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([auf wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) ist ein WordPress Plugin (auch als [PPP Modul erhältlich](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht
+* [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([auf wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) ist ein WordPress Plugin), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht
+* [OSF.php](https://github.com/SimonWaldherr/OSF.php) sind PHP Funktionen um OSF nach HTML (und andere Formate) zu wandeln (dieses Repo sollte als Submodul in Projekte eingefügt werden, welche OSF verarbeiten)
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) sind Bookmarklets die das [Shownot.es Team](http://shownot.es) vor dem Umstieg auf [Etherpad lite](https://github.com/ether/etherpad-lite) verwendete
 * [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) wandelt Zeitangaben in den Shownotes in weiterverarbeitbare Zahlen um
