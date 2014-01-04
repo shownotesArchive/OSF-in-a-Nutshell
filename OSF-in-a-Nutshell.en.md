@@ -45,7 +45,8 @@ Important basics of the Open Show Notes format (OSF) are:
 * [ShowPad](https://github.com/shownotes/show-pad) is an extension to [Etherpad lite](https://github.com/ether/etherpad-lite) with user management, time management, a nice interface, and import and export functions
 * [tinyOSF.js](https://github.com/shownotes/tinyOSF.js) is a reference implementation of the OSF parser in JavaScript
 * [OpenShownotesFormat](https://github.com/shownotes/OpenShownotesFormat) is the first implementation of the OSF standards (written in PHP). A freely usable installation of this tool is available at [tools.shownot.es/parsersuite](http://tools.shownot.es/parsersuite/?configfile=shownotes)
-* [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([at wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) is a WordPress Plugin (also available as [PPP Module](https://github.com/podlove/podlove-publisher/tree/module-shownotes)), which allows the conversion of OSF to HTML directly in the blog
+* [wp-osf-shownotes](https://github.com/SimonWaldherr/wp-osf-shownotes) ([at wordpress.org](http://wordpress.org/extend/plugins/shownotes/)) is a WordPress Plugin), which allows the conversion of OSF to HTML directly in the blog
+* [OSF.php](https://github.com/SimonWaldherr/OSF.php) are PHP functions to convert OSF to HTML (and other formats) (it's meant to be included as submodule in other projects)
 * [ep_insertTimestamp](https://github.com/shownotes/ep_insertTimestamp) extends EPL installations by an automated date / time input
 * [EtherpadBookmarklets](https://github.com/shownotes/EtherpadBookmarklets) are bookmarklets which were used by the [Shownot.es Team](http://shownot.es) before moving to [Etherpad Lite](https://github.com/ether/etherpad-lite)
 * [ParseTime.js](https://github.com/SimonWaldherr/parseTime.js) can parse Timedefinitions in Show notes
