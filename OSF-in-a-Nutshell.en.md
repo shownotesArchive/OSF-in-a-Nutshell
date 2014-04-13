@@ -6,9 +6,19 @@
 
 The Open Show Notes format, or short OSF is a format which simplifies the creation of show notes for podcasts. 
 
-##Word definition
+##Beispiele
 
-The following statements has to be interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
+time information as HH:MM:SS followed by text and Chapter-Tag  
+```00:00:00 Intro #c```
+
+time information as HH:MM:SS.ms followed by text and a url enclosed in angle brackets  
+```00:01:25.234 Shownot.es Projekt <http://shownot.es/>```
+
+additional information via glossary (Wikipedia-Link)  
+```00:03:13 Geofencing <http://de.wikipedia.org/wiki/Geofencing> #g```
+
+time information as UNIX-Timestamp  
+```1373135108 Sendungsbeginn #c```
 
 ##Basics
 
@@ -39,6 +49,10 @@ Important basics of the Open Show Notes format (OSF) are:
 	* unfinished items should be marked with ```#revision```(```#r```), so they wan't appear in the parsed output
 	* in addition to any item that contains a link, the top and second level domain are attached as a tag (e.g.: ```#googlecom```)
 	* more tags can also be used, but have no immediate impact on the result (for some tags exists icons: [BitmapWebIcons](http://simonwaldherr.github.io/BitmapWebIcons/))
+
+##Word definition
+
+The following statements has to be interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 ##Tools
 

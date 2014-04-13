@@ -4,11 +4,21 @@
 
 ##Erklärung
 
-Das Open Shownotes Format, oder auch kurz OSF ist ein Format welches die Erstellung von Shownotes für Podcasts erleichtert. 
+Das Open Shownotes Format, oder auch kurz OSF ist ein Format welches die Erstellung von Shownotes für Podcasts erleichtert.
 
-##Wortdefinition
+##Beispiele
 
-Die folgende Erklärung muss wie in [RFC 2119](http://tools.ietf.org/html/rfc2119) definiert gelesen werden, wobei in der deutschen Übersetzung ```MUST```/```SHALL``` mit ```MUSS```, ```REQUIRED``` mit ```BENÖTIGT```,  ```MUST NOT```/```SHALL NOT``` mit ```DARF NICHT```, ```SHOULD``` mit ```SOLLTE```/```KANN```, ```SHOULD NOT``` mit ```SOLLTE NICHT``` und ```MAY``` mit ```KANN``` übersetzt wurde.
+Zeitangabe als HH:MM:SS gefolgt von Text und Chapter-Tag  
+```00:00:00 Intro #c```
+
+Zeitangabe als HH:MM:SS.ms gefolgt von Text und Link in spitzen Klammern  
+```00:01:25.234 Shownot.es Projekt <http://shownot.es/>```
+
+Zusätzliche Informationen mittels Glossar (Wikipedia-Link)  
+```00:03:13 Geofencing <http://de.wikipedia.org/wiki/Geofencing> #g``
+
+Zeitangabe als UNIX-Timestamp  
+```1373135108 Sendungsbeginn #c```
 
 ##Grundlagen
 
@@ -39,6 +49,10 @@ Wichtige Grundlagen des Open Shownotes Format (OSF) sind:
 	* unfertige Zeilen sollten mit ```#revision```(```#r```) gekennzeichnet werden, diese werden nicht exportiert
 	* zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt (z.B.: ```#googlede```)
 	* weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis (für einige Tags gibt es kleine Bildchen: [BitmapWebIcons](http://simonwaldherr.github.io/BitmapWebIcons/))
+
+##Wortdefinition
+
+Die folgende Erklärung muss wie in [RFC 2119](http://tools.ietf.org/html/rfc2119) definiert gelesen werden, wobei in der deutschen Übersetzung ```MUST```/```SHALL``` mit ```MUSS```, ```REQUIRED``` mit ```BENÖTIGT```,  ```MUST NOT```/```SHALL NOT``` mit ```DARF NICHT```, ```SHOULD``` mit ```SOLLTE```/```KANN```, ```SHOULD NOT``` mit ```SOLLTE NICHT``` und ```MAY``` mit ```KANN``` übersetzt wurde.
 
 ##Tools
 
