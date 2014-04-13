@@ -24,58 +24,83 @@
 </head>
 <body class="normal">
   <div id="wrapper">
-    <h1 id="osfinanutshell">OSF in a Nutshell</h1>
-    <p><a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.en.html">english</a> - <a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.de.html">deutsch</a></p>
-    <h2 id="explanation">Explanation</h2>
-    <p>The Open Show Notes format, or short OSF is a format which simplifies the creation of show notes for podcasts. </p>
-    <h2 id="worddefinition">Word definition</h2>
-    <p>The following statements has to be interpreted as described in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
-    <h2 id="basics">Basics</h2>
-    <p>Important basics of the Open Show Notes format (OSF) are:</p>
-    <ul>
-      <li>each line is its own separate item (related information <strong>shall not</strong> be separated by <code>\n</code>)</li>
-      <li>blank lines are ignored</li>
-      <li>each item <strong>may</strong> contain a time specification</li>
-      <li>Times are to specify as UNIX timestamps or in <code>HH:MM:SS</code> format (if the <a href="http://pad.shownot.es/">Showpad</a> is used to write show notes, these times can be made by <code>###</code> followed by a whitespace)</li>
-      <li>after the time (or at the beginning of the line if no time is specified), a level of hierarchy can be set with <code>-</code>. The more <code>-</code> the deeper the item is nested.</li>
-      <li>don&#8217;t use to much hierarchies</li>
-      <li>each item <strong>must</strong> contain a text, it can contain most of UTF&#8211;8 characters, but to avoid problems, it would make sense to limit themselves to ISO&#8211;8859&#8211;15</li>
-      <li>Items <strong>should</strong> begin with a capital letter, unless it is a subitems or a half-sentences</li>
-      <li>Punctuation marks at the end of items <strong>should</strong> be avoided</li>
-      <li>Don&#8217;t write language specific quotation marks, use <code>&quot;</code>, they will be converted automatically by the parser</li>
-      <li>each item <strong>may</strong> contain <strong>one</strong> URL, this URL has to beginn with <code>&lt;</code> and end with <code>&gt;</code></li>
-      <li>each item <strong>may</strong> contain <strong>multiple</strong> tags, they have to start with <code>#</code></li>
-      <li>There are also tags with predefined properties:
-      <ul>
-        <li><code>#chapter</code> (<code>#c</code>) identifies an item as the beginning of a new chapter</li>
-        <li><code>#topic</code> (<code>#t</code>) identifies an item as an important part of the show notes</li>
-        <li><code>#video</code> (<code>#v</code>), <code>#audio</code> (<code>#a</code>) and <code>#image</code> (<code>#i</code>) and can be used to refer to media files</li>
-        <li><code>#quote</code> (<code>#q</code>) marks quotes, it should also be given the name of the person who said it
-          <ul>
-            <li>All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (FAMOUS)</li>
-          </ul>
-        </li>
-        <li><code>#shopping</code> links can be marked for online shops</li>
-        <li><code>#prediction</code> is used to highlight predictions that need to be checked later</li>
-        <li>Links with further and descriptive content, which was not directly discussed in the podcast can be marked with <code>#glossary</code></li>
-        <li>Links that have been directly mentioned in the podcast, have to be marked with <code>#link</code></li>
-        <li>unfinished items should be marked with <code>#revision</code>(<code>#r</code>), so they wan&#8217;t appear in the parsed output</li>
-        <li>in addition to any item that contains a link, the top and second level domain are attached as a tag (e.g.: <code>#googlecom</code>)</li>
-        <li>more tags can also be used, but have no immediate impact on the result (for some tags exists icons: <a href="http://simonwaldherr.github.io/BitmapWebIcons/">BitmapWebIcons</a>)</li>
-        </ul>
-      </li>
-    </ul>
-    <h2 id="tools">Tools</h2>
-    <ul>
-      <li><a href="https://github.com/shownotes/show-pad">ShowPad</a> is an extension to <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> with user management, time management, a nice interface, and import and export functions</li>
-      <li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> is a reference implementation of the OSF parser in JavaScript</li>
-      <li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> is the first implementation of the OSF standards (written in PHP). A freely usable installation of this tool is available at <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a></li>
-      <li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">at wordpress.org</a>) is a WordPress Plugin (also available as <a href="https://github.com/podlove/podlove-publisher/tree/module-shownotes">PPP Module</a>), which allows the conversion of OSF to HTML directly in the blog</li>
-      <li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> extends EPL installations by an automated date / time input</li>
-      <li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> are bookmarklets which were used by the <a href="http://shownot.es">Shownot.es Team</a> before moving to <a href="https://github.com/ether/etherpad-lite">Etherpad Lite</a></li>
-      <li><a href="https://github.com/SimonWaldherr/parseTime.js">ParseTime.js</a> can parse Timedefinitions in Show notes</li>
-      <li><a href="https://github.com/Drake81/shownotes-message-service">XMPP Notification Service</a></li>
-    </ul>
-  </div>
+      <h1 id="osfinanutshell">OSF in a Nutshell</h1>
+
+<p><a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.en.html">english</a> - <a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.de.html">deutsch</a></p>
+
+<h2 id="explanation">Explanation</h2>
+
+<p>The Open Show Notes format, or short OSF is a format which simplifies the creation of show notes for podcasts. </p>
+
+<h2 id="beispiele">Beispiele</h2>
+
+<p>time information as HH:MM:SS followed by text and Chapter-Tag<br/>
+<code>00:00:00 Intro #c</code></p>
+
+<p>time information as HH:MM:SS.ms followed by text and a url enclosed in angle brackets<br/>
+<code>00:01:25.234 Shownot.es Projekt &lt;http://shownot.es/&gt;</code></p>
+
+<p>additional information via glossary (Wikipedia-Link)<br/>
+<code>00:03:13 Geofencing &lt;http://de.wikipedia.org/wiki/Geofencing&gt; #g</code></p>
+
+<p>time information as UNIX-Timestamp<br/>
+<code>1373135108 Sendungsbeginn #c</code></p>
+
+<h2 id="basics">Basics</h2>
+
+<p>Important basics of the Open Show Notes format (OSF) are:</p>
+
+<ul>
+<li>each line is its own separate item (related information <strong>shall not</strong> be separated by <code>\n</code>)</li>
+<li>blank lines are ignored</li>
+<li>each item <strong>may</strong> contain a time specification</li>
+<li>Times are to specify as UNIX timestamps or in <code>HH:MM:SS</code> format (if the <a href="http://pad.shownot.es/">Showpad</a> is used to write show notes, these times can be made by <code>###</code> followed by a whitespace)</li>
+<li>after the time (or at the beginning of the line if no time is specified), a level of hierarchy can be set with <code>-</code>. The more <code>-</code> the deeper the item is nested.</li>
+<li>don&#8217;t use to much hierarchies</li>
+<li>each item <strong>must</strong> contain a text, it can contain most of UTF&#8211;8 characters, but to avoid problems, it would make sense to limit themselves to ISO&#8211;8859&#8211;15</li>
+<li>Items <strong>should</strong> begin with a capital letter, unless it is a subitems or a half-sentences</li>
+<li>Punctuation marks at the end of items <strong>should</strong> be avoided</li>
+<li>Don&#8217;t write language specific quotation marks, use <code>&quot;</code>, they will be converted automatically by the parser</li>
+<li>each item <strong>may</strong> contain <strong>one</strong> URL, this URL has to beginn with <code>&lt;</code> and end with <code>&gt;</code></li>
+<li>each item <strong>may</strong> contain <strong>multiple</strong> tags, they have to start with <code>#</code></li>
+<li>There are also tags with predefined properties:
+
+<ul>
+<li><code>#chapter</code> (<code>#c</code>) identifies an item as the beginning of a new chapter</li>
+<li><code>#topic</code> (<code>#t</code>) identifies an item as an important part of the show notes</li>
+<li><code>#video</code> (<code>#v</code>), <code>#audio</code> (<code>#a</code>) and <code>#image</code> (<code>#i</code>) and can be used to refer to media files</li>
+<li><code>#quote</code> (<code>#q</code>) marks quotes, it should also be given the name of the person who said it
+
+<ul>
+<li>All persons mentioned in the show notes (whether in citations or references) should also be specified in the header (FAMOUS)</li>
+</ul></li>
+<li><code>#shopping</code> links can be marked for online shops</li>
+<li><code>#prediction</code> is used to highlight predictions that need to be checked later</li>
+<li>Links with further and descriptive content, which was not directly discussed in the podcast can be marked with <code>#glossary</code></li>
+<li>Links that have been directly mentioned in the podcast, have to be marked with <code>#link</code></li>
+<li>unfinished items should be marked with <code>#revision</code>(<code>#r</code>), so they wan&#8217;t appear in the parsed output</li>
+<li>in addition to any item that contains a link, the top and second level domain are attached as a tag (e.g.: <code>#googlecom</code>)</li>
+<li>more tags can also be used, but have no immediate impact on the result (for some tags exists icons: <a href="http://simonwaldherr.github.io/BitmapWebIcons/">BitmapWebIcons</a>)</li>
+</ul></li>
+</ul>
+
+<h2 id="worddefinition">Word definition</h2>
+
+<p>The following statements has to be interpreted as described in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+<li><a href="https://github.com/shownotes/show-pad">ShowPad</a> is an extension to <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> with user management, time management, a nice interface, and import and export functions</li>
+<li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> is a reference implementation of the OSF parser in JavaScript</li>
+<li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> is the first implementation of the OSF standards (written in PHP). A freely usable installation of this tool is available at <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a></li>
+<li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">at wordpress.org</a>) is a WordPress Plugin), which allows the conversion of OSF to HTML directly in the blog</li>
+<li><a href="https://github.com/SimonWaldherr/OSF.php">OSF.php</a> are PHP functions to convert OSF to HTML (and other formats) (it&#8217;s meant to be included as submodule in other projects)</li>
+<li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> extends EPL installations by an automated date / time input</li>
+<li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> are bookmarklets which were used by the <a href="http://shownot.es">Shownot.es Team</a> before moving to <a href="https://github.com/ether/etherpad-lite">Etherpad Lite</a></li>
+<li><a href="https://github.com/SimonWaldherr/parseTime.js">ParseTime.js</a> can parse Timedefinitions in Show notes</li>
+<li><a href="https://github.com/Drake81/shownotes-message-service">XMPP Notification Service</a></li>
+</ul>
+    </div>
 </body>
 </html>

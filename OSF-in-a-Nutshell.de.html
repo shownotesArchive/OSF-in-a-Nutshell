@@ -24,58 +24,83 @@
 </head>
 <body class="normal">
   <div id="wrapper">
-    <h1 id="osfinanutshell">OSF in a Nutshell</h1>
-    <p><a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.en.html">english</a> - <a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.de.html">deutsch</a></p>
-    <h2 id="erklrung">Erklärung</h2>
-    <p>Das Open Shownotes Format, oder auch kurz OSF ist ein Format welches die Erstellung von Shownotes für Podcasts erleichtert. </p>
-    <h2 id="wortdefinition">Wortdefinition</h2>
-    <p>Die folgende Erklärung muss wie in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> definiert gelesen werden, wobei in der deutschen Übersetzung <code>MUST</code>/<code>SHALL</code> mit <code>MUSS</code>, <code>REQUIRED</code> mit <code>BENÖTIGT</code>, <code>MUST NOT</code>/<code>SHALL NOT</code> mit <code>DARF NICHT</code>, <code>SHOULD</code> mit <code>SOLLTE</code>/<code>KANN</code>, <code>SHOULD NOT</code> mit <code>SOLLTE NICHT</code> und <code>MAY</code> mit <code>KANN</code> übersetzt wurde.</p>
-    <h2 id="grundlagen">Grundlagen</h2>
-    <p>Wichtige Grundlagen des Open Shownotes Format (OSF) sind:</p>
-    <ul>
-      <li>jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch <code>\n</code> trennen)</li>
-      <li>leere Zeilen werden ignoriert</li>
-      <li>jedes Item <strong>kann</strong> eine Zeitangabe enthalten</li>
-      <li>Zeitangaben sind als UNIX-Timestamps oder im Format <code>HH:MM:SS</code> anzugeben (wenn das <a href="http://pad.shownot.es/">ShowPad</a> zum Shownotes schreiben verwendet wird, können diese Zeitangaben per <code>###</code> und einem darauf folgendem Leerzeichen automatisch eingefügt werden)</li>
-      <li>nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe über die Hierarchieebene mittels <code>-</code> gemacht werden. Je mehr <code>-</code>, desto tiefer verschachtelt ist das Item.</li>
-      <li>mit Hierarchien <strong>sollte</strong> man nicht übertreiben</li>
-      <li>jedes Item <strong>muss</strong> einen Text enthalten, dieser kann die meisten UTF&#8211;8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO&#8211;8859&#8211;15 zu beschränken</li>
-      <li>Items <strong>sollten</strong> mit Großbuchstaben beginnen, es sei den es handelt sich um Subitems oder Halbsätze</li>
-      <li>Satzzeichen am Ende von Items <strong>sollten</strong> vermieden werden</li>
-      <li>Es sollten keine Sprachspezifischen Anführungszeichen, sondern nur <code>&quot;</code> verwendet werden</li>
-      <li>jedes Item <strong>kann</strong> <strong>eine</strong> URL enthalten, diese ist mit <code>&lt;</code> am Anfang und <code>&gt;</code> am Ende zu kennzeichnen</li>
-      <li>jedes Item <strong>kann</strong> <strong>mehrere</strong> Tags enthalten, diese sind mit <code>#</code> zu beginnen</li>
-      <li>ausserdem gibt es Tags mit vordefinierten Eigenschaften:
-      <ul>
-        <li><code>#chapter</code> (<code>#c</code>) kennzeichnet ein Item als Beginn eines neuen Kapitels</li>
-        <li><code>#topic</code> (<code>#t</code>) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes</li>
-        <li><code>#video</code> (<code>#v</code>), <code>#audio</code> (<code>#a</code>) und <code>#image</code> (<code>#i</code>) können verwendet werden, um Mediendateien zu referenzieren</li>
-        <li><code>#quote</code> (<code>#q</code>) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
-          <ul>
-            <li>Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (FAMOUS)</li>
-          </ul>
-        </li>
-        <li>mit <code>#shopping</code> können Links zur Onlineshops gekennzeichnet werden</li>
-        <li><code>#prediction</code> wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen</li>
-        <li>Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit <code>#glossary</code> gekennzeichnet werden</li>
-        <li>Links die direkt im Podcast erwähnt worden sind, sind mit <code>#link</code> zu kennzeichnen</li>
-        <li>unfertige Zeilen sollten mit <code>#revision</code>(<code>#r</code>) gekennzeichnet werden, diese werden nicht exportiert</li>
-        <li>zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt (z.B.: <code>#googlede</code>)</li>
-        <li>weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis (für einige Tags gibt es kleine Bildchen: <a href="http://simonwaldherr.github.io/BitmapWebIcons/">BitmapWebIcons</a>)</li>
-      </ul>
-      </li>
-    </ul>
-    <h2 id="tools">Tools</h2>
-    <ul>
-      <li><a href="https://github.com/shownotes/show-pad">ShowPad</a> ist eine Erweiterung von <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> um Usermanagement, Zeitmanagement, ein schönes Interface sowie Im- und Export Funktionen</li>
-      <li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> ist eine Referenzimplementierung des OSF Parsers in JavaScript</li>
-      <li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> ist die erste Implementierung des OSF Standards (geschrieben in PHP). Eine frei verwendbare Installation dieses Tools ist auf <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a> zu finden</li>
-      <li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">auf wordpress.org</a>) ist ein WordPress Plugin (auch als <a href="https://github.com/podlove/podlove-publisher/tree/module-shownotes">PPP Modul erhältlich</a>), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht</li>
-      <li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe</li>
-      <li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> sind Bookmarklets die das <a href="http://shownot.es">Shownot.es Team</a> vor dem Umstieg auf <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> verwendete</li>
-      <li><a href="https://github.com/SimonWaldherr/parseTime.js">ParseTime.js</a> wandelt Zeitangaben in den Shownotes in weiterverarbeitbare Zahlen um</li>
-      <li><a href="https://github.com/Drake81/shownotes-message-service">XMPP Notification Service</a></li>
-    </ul>
-  </div>
+      <h1 id="osfinanutshell">OSF in a Nutshell</h1>
+
+<p><a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.en.html">english</a> - <a href="http://shownotes.github.io/OSF-in-a-Nutshell/OSF-in-a-Nutshell.de.html">deutsch</a></p>
+
+<h2 id="erklrung">Erklärung</h2>
+
+<p>Das Open Shownotes Format, oder auch kurz OSF ist ein Format welches die Erstellung von Shownotes für Podcasts erleichtert.</p>
+
+<h2 id="beispiele">Beispiele</h2>
+
+<p>Zeitangabe als HH:MM:SS gefolgt von Text und Chapter-Tag<br/>
+<code>00:00:00 Intro #c</code></p>
+
+<p>Zeitangabe als HH:MM:SS.ms gefolgt von Text und Link in spitzen Klammern<br/>
+<code>00:01:25.234 Shownot.es Projekt &lt;http://shownot.es/&gt;</code></p>
+
+<p>Zusätzliche Informationen mittels Glossar (Wikipedia-Link)<br/>
+`<code>00:03:13 Geofencing &lt;http://de.wikipedia.org/wiki/Geofencing&gt; #g</code></p>
+
+<p>Zeitangabe als UNIX-Timestamp<br/>
+<code>1373135108 Sendungsbeginn #c</code></p>
+
+<h2 id="grundlagen">Grundlagen</h2>
+
+<p>Wichtige Grundlagen des Open Shownotes Format (OSF) sind:</p>
+
+<ul>
+<li>jede Zeile ist ein eigenes Item (d.h. zusammenhängende Informationen nicht durch <code>\n</code> trennen)</li>
+<li>leere Zeilen werden ignoriert</li>
+<li>jedes Item <strong>kann</strong> eine Zeitangabe enthalten</li>
+<li>Zeitangaben sind als UNIX-Timestamps oder im Format <code>HH:MM:SS</code> anzugeben (wenn das <a href="http://pad.shownot.es/">ShowPad</a> zum Shownotes schreiben verwendet wird, können diese Zeitangaben per <code>###</code> und einem darauf folgendem Leerzeichen automatisch eingefügt werden)</li>
+<li>nach der Zeitangabe (oder am Anfang der Zeile wenn keine Zeit angegeben wurde) kann eine Angabe über die Hierarchieebene mittels <code>-</code> gemacht werden. Je mehr <code>-</code>, desto tiefer verschachtelt ist das Item.</li>
+<li>mit Hierarchien <strong>sollte</strong> man nicht übertreiben</li>
+<li>jedes Item <strong>muss</strong> einen Text enthalten, dieser kann die meisten UTF&#8211;8 Zeichen enthalten, um Probleme zu vermeiden wäre es aber Sinnvoll, sich auf ISO&#8211;8859&#8211;15 zu beschränken</li>
+<li>Items <strong>sollten</strong> mit Großbuchstaben beginnen, es sei den es handelt sich um Subitems oder Halbsätze</li>
+<li>Satzzeichen am Ende von Items <strong>sollten</strong> vermieden werden</li>
+<li>Es sollten keine Sprachspezifischen Anführungszeichen, sondern nur <code>&quot;</code> verwendet werden</li>
+<li>jedes Item <strong>kann</strong> <strong>eine</strong> URL enthalten, diese ist mit <code>&lt;</code> am Anfang und <code>&gt;</code> am Ende zu kennzeichnen</li>
+<li>jedes Item <strong>kann</strong> <strong>mehrere</strong> Tags enthalten, diese sind mit <code>#</code> zu beginnen</li>
+<li>ausserdem gibt es Tags mit vordefinierten Eigenschaften:
+
+<ul>
+<li><code>#chapter</code> (<code>#c</code>) kennzeichnet ein Item als Beginn eines neuen Kapitels</li>
+<li><code>#topic</code> (<code>#t</code>) kennzeichnet ein Item als wichtigen Bestandteil der Shownotes</li>
+<li><code>#video</code> (<code>#v</code>), <code>#audio</code> (<code>#a</code>) und <code>#image</code> (<code>#i</code>) können verwendet werden, um Mediendateien zu referenzieren</li>
+<li><code>#quote</code> (<code>#q</code>) kennzeichnet Zitate, es sollte immer die Person die es gesagt hat angegeben werden
+
+<ul>
+<li>Alle in den Shownotes erwähnten Personen (egal ob bei Zitaten oder Erwähnungen) sollten auch im Header angegeben werden (FAMOUS)</li>
+</ul></li>
+<li>mit <code>#shopping</code> können Links zur Onlineshops gekennzeichnet werden</li>
+<li><code>#prediction</code> wird verwendet, um Vorhersagen zu markieren, die später überprüft werden müssen</li>
+<li>Links mit weiterführenden und beschreibenden Inhalten, auf die aber im Podcast nicht weiter eingegangen worden ist können mit <code>#glossary</code> gekennzeichnet werden</li>
+<li>Links die direkt im Podcast erwähnt worden sind, sind mit <code>#link</code> zu kennzeichnen</li>
+<li>unfertige Zeilen sollten mit <code>#revision</code>(<code>#r</code>) gekennzeichnet werden, diese werden nicht exportiert</li>
+<li>zusätzlich werden jedem Item, welches einen Link enthält die Top- und Second Level Domain als Tags beigefügt (z.B.: <code>#googlede</code>)</li>
+<li>weitere Tags können ebenfalls verwendet werden, haben jedoch vorerst keine Auswirkungen auf das Ergebnis (für einige Tags gibt es kleine Bildchen: <a href="http://simonwaldherr.github.io/BitmapWebIcons/">BitmapWebIcons</a>)</li>
+</ul></li>
+</ul>
+
+<h2 id="wortdefinition">Wortdefinition</h2>
+
+<p>Die folgende Erklärung muss wie in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> definiert gelesen werden, wobei in der deutschen Übersetzung <code>MUST</code>/<code>SHALL</code> mit <code>MUSS</code>, <code>REQUIRED</code> mit <code>BENÖTIGT</code>, <code>MUST NOT</code>/<code>SHALL NOT</code> mit <code>DARF NICHT</code>, <code>SHOULD</code> mit <code>SOLLTE</code>/<code>KANN</code>, <code>SHOULD NOT</code> mit <code>SOLLTE NICHT</code> und <code>MAY</code> mit <code>KANN</code> übersetzt wurde.</p>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+<li><a href="https://github.com/shownotes/show-pad">ShowPad</a> ist eine Erweiterung von <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> um Usermanagement, Zeitmanagement, ein schönes Interface sowie Im- und Export Funktionen</li>
+<li><a href="https://github.com/shownotes/tinyOSF.js">tinyOSF.js</a> ist eine Referenzimplementierung des OSF Parsers in JavaScript</li>
+<li><a href="https://github.com/shownotes/OpenShownotesFormat">OpenShownotesFormat</a> ist die erste Implementierung des OSF Standards (geschrieben in PHP). Eine frei verwendbare Installation dieses Tools ist auf <a href="http://tools.shownot.es/parsersuite/?configfile=shownotes">tools.shownot.es/parsersuite</a> zu finden</li>
+<li><a href="https://github.com/SimonWaldherr/wp-osf-shownotes">wp-osf-shownotes</a> (<a href="http://wordpress.org/extend/plugins/shownotes/">auf wordpress.org</a>) ist ein WordPress Plugin), welches die Umwandlung von OSF zu HTML direkt im Blog ermöglicht</li>
+<li><a href="https://github.com/SimonWaldherr/OSF.php">OSF.php</a> sind PHP Funktionen um OSF nach HTML (und andere Formate) zu wandeln (dieses Repo sollte als Submodul in Projekte eingefügt werden, welche OSF verarbeiten)</li>
+<li><a href="https://github.com/shownotes/ep_insertTimestamp">ep_insertTimestamp</a> erweitert EPL Installationen um eine automatisierte Datum/Zeit eingabe</li>
+<li><a href="https://github.com/shownotes/EtherpadBookmarklets">EtherpadBookmarklets</a> sind Bookmarklets die das <a href="http://shownot.es">Shownot.es Team</a> vor dem Umstieg auf <a href="https://github.com/ether/etherpad-lite">Etherpad lite</a> verwendete</li>
+<li><a href="https://github.com/SimonWaldherr/parseTime.js">ParseTime.js</a> wandelt Zeitangaben in den Shownotes in weiterverarbeitbare Zahlen um</li>
+<li><a href="https://github.com/Drake81/shownotes-message-service">XMPP Notification Service</a></li>
+</ul>
+    </div>
 </body>
 </html>
