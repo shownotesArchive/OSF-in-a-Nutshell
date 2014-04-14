@@ -6,7 +6,7 @@
 
 The Open Show Notes format, or short OSF is a format which simplifies the creation of show notes for podcasts. 
 
-##Beispiele
+##Examples
 
 time information as HH:MM:SS followed by text and Chapter-Tag  
 ```00:00:00 Intro #c```

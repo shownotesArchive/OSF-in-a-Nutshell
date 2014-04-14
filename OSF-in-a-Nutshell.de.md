@@ -15,7 +15,7 @@ Zeitangabe als HH:MM:SS.ms gefolgt von Text und Link in spitzen Klammern
 ```00:01:25.234 Shownot.es Projekt <http://shownot.es/>```
 
 Zusätzliche Informationen mittels Glossar (Wikipedia-Link)  
-```00:03:13 Geofencing <http://de.wikipedia.org/wiki/Geofencing> #g``
+```00:03:13 Geofencing <http://de.wikipedia.org/wiki/Geofencing> #g```
 
 Zeitangabe als UNIX-Timestamp  
 ```1373135108 Sendungsbeginn #c```
